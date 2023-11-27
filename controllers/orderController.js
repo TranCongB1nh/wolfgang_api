@@ -37,7 +37,7 @@ const orderController = {
                     <div class="componenttoprint"> 
                         <div style="width: 100%; min-height: 600px; padding: 10px;">
                             <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
-                                <img src="/favicon.ico" alt="logo WolfGang" width="100" height="100">
+                                <img src="https://res.cloudinary.com/dnlfoftar/image/upload/v1700971959/W-remove_nnqu4m.png" alt="logo WolfGang" width="200" height="100">
                                 <div class="w-[300px] flex flex-col items-start" style="display: flex; flex-direction: column; align-items: flex-start;">
                                     <div class="w-full uppercase text-[25px] tracking-widest font-black text-center" style="width: 100%; text-transform: uppercase; font-size: 40px; letter-spacing: 5px; color: rgb(0, 0, 0); font-weight: 900; text-align: center;">
                                         WolfGang store

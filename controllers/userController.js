@@ -7,6 +7,9 @@ const userController = {
         try {
             const { email, password, fullName, address, gender, phoneNumber, role, type, salary } = await req.body;
 
+            const existEmail = await User.find({ email: email });
+            if (existEmail) return res.status(401).json({ status: 401, message: 'Email đã được sử dụng' });
+
             const salt = await bcrypt.genSalt(10);
             const hashedPassword = await bcrypt.hash(password, salt);
 
@@ -21,10 +24,9 @@ const userController = {
                 type,
                 salary
             });
-            console.log(password);
 
             const savedUser = await newUser.save();
-            return res.status(200).json(savedUser);
+            return res.status(200).json({ status: 200, message: 'Thành công', data: savedUser });
         }
         catch (err) {
             return res.status(500).json(err);
